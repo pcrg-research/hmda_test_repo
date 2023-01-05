@@ -1,0 +1,40 @@
+    /*Styles for Buttons*/
+
+    .main_button, .first_button{
+        background-color: #725292;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 192px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-right: 32px;
+        text-decoration: none;
+        text-decoration-line: none;
+        transition: background-color 0.15s, opacity 0.15s, box-shadow 0.15s;
+        
+    }
+
+    .first_button{
+        margin-left: 5%;
+    }
+
+    .main_button:link, .first_button:link{
+        color: white;
+        text-decoration: none;
+    
+    }
+
+    .main_button:hover, .first_button:hover{
+        background-color: #624481;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+    } 
+
+    .main_button:active, .first_button:active{
+        opacity: 0.80;
+        text-decoration: none;
+    }
