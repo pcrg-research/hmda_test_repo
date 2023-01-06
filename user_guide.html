@@ -11,7 +11,7 @@
         <nav>
             <label class="logo"> Pittsburgh Community Reinvestment Group </label>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href = "home.html">Home</a></li>
                 <li><a class = "active" href = "user_guide.html">User Guide</a></li>
                 <li><a href = "neighborhood_profiles.html">Neighborhood Profiles</a></li>
                 <li><a href = "lending_profiles.html">Lending Profiles</a></li>
@@ -35,8 +35,9 @@
             <ul class="body_list">
                 <li><a href="#data_source"><button class="body_button">Data Sources</button></a></li>
                 <li><a href="#applicant_info"><button class="body_button">Applicant Information</button></a></li>
-                <li><a href="#dispoisition_info"><button class="body_button">Disposition Information</button></a></li>
+                <li><a href="#disposition_info"><button class="body_button">Disposition Information</button></a></li>
                 <li><a href="#census_tract_info"><button class="body_button">Census Tract Information</button></a></li>
+                <li><a href="#other_info"><button class="body_button">Other Information</button></a></li>
             </ul>
         </p>
 
@@ -105,8 +106,18 @@
             <img src="images/2021_ami.png" alt="FFIEC Derived Area Median Income Brackets for Pittsburgh MSA 2021" width="640px">
         
         </p>
+
+        <p class="body_second_header">Loan Purpose</p>
+
+        <p class="body_text">
+            The HMDA dataset includes three major categories of loan purposes: home purchase loans, home improvement loans, and refinancing loans. After 2018, HMDA further distinguished refinancing loans by dividing standard refinancing and cash out refinancing into separate categories. Additional loan purposes include other, nonstandard loans and a rarely used non-applicable category.
+        </p>
         
-        <p class="body_header"><a id="dispoisition_info" class="no_hover">Application Disposition Status</a></p>
+        <p class="body_text">
+            PCRG has aggregated refinanced loans back into a single category. The focus of this report concerns home purchase, home improvement, and refinancing loans - but we did not exclude other and non-applicable loans from aggregate totals.
+        </p>
+
+        <p class="body_header"><a id="disposition_info" class="no_hover">Application Disposition Status</a></p>
 
         <p class="body_second_header">Originations</p>
 
@@ -159,5 +170,22 @@
             This is not a weighted average based on the populations of the tracts that make up a given locality, and therefore should be used with caution. While not perfect, PCRG strongly believes that providing this information still provides a stronger contextual basis for understanding CRA targetted areas within Allegheny County.
 
         </p>
+
+        <p class="body_header"><a id="other_info" class="no_hover">Other Information</a></p>
+
+        <p class="body_text">
+            Maps created for analysis on this site are zoom enabled using the mouse scroll wheel. To select multiple census tracts at once on maps, hold the "control" button while selecting with the left mouse button.
+        </p>
+
+        <p class="body_text">
+            Census tracts 42000000001 and 42000000002 are dummy variables created as a workaround to label maps titles for Allegheny County (excluding the City of Pittsburgh) and the City of Pittsburgh specifically. These do not accurately reflect ACS statistics for the two areas, but instead a simple average for all tracts identified as Pittsburgh versus the remainder of the county.
+        </p>
+
+        <p class="body_text">
+            This site remains a work in progress, created using Microsoft's PowerBI software. If you have any difficulty navigating the website or provided analysis, please reach out to <a href="mailto: jboyle@pcrg.org" class="email">John Boyle at PCRG</a> or visit our <a href="contact.html" class="email">Contact Page linked here.</a>
+        </p>
+        <br>
+        <br>
+
 </body>
 </html>
