@@ -20,5 +20,144 @@
                 <li><a href = "contact.html">Contact</a></li>
             </ul>
         </nav>
+
+        <p class="body_text">
+            This report highlights home mortgage lending data for Allegheny County from 2012 to 2021, with a specific focus on the most recent HMDA data from 2018 to 2021. 
+            In total, this encompasses over 597,000 loan applications from 1554 unique financial institutions over the decade.
+            While the bulk of analysis focuses on 2018 to 2021, futher loan records at the neighborhood and individual financial institution level also includes HMDA data from 2012 to 2017.
+            Because of changes to HMDA reporting during the 10 year reporting period from 2012 to 2021, PCRG has worked to preserve all lending records at the most disaggregated level to provide a basis for analysis among the data from 2012-2017 and 2018-2021.
+            Included below is the data dictionary, which covers the relevant steps taken to analyze this data, as well as information covering the source material for American Community Survey (ACS) data used in creating our neighborhood profiles.
+        </p>
+
+        <p class="body_header">Jump to Section</p>
+
+        <p>
+            <ul class="body_list">
+                <li><a href="#data_source"><button class="body_button">Data Sources</button></a></li>
+                <li><a href="#applicant_info"><button class="body_button">Applicant Information</button></a></li>
+                <li><a href="#dispoisition_info"><button class="body_button">Disposition Information</button></a></li>
+                <li><a href="#census_tract_info"><button class="body_button">Census Tract Information</button></a></li>
+            </ul>
+        </p>
+
+        <p class = "body_header"><a id="data_source" class="no_hover">Data Sources</a></p>
+
+        <p class = "body_text">
+            PCRG's annual mortgage lending study is derived from HMDA data, including the previous decade of lending from 2012 to 2021. 
+            This data is made available annually by the Consumer Financial Protection Bureau (CFPB) and is aided in collection by the Federal Financial Institutions Examination Council (FFIEC). 
+            The following analysis will mostly focus on the most recent year and provide general trends for neighborhoods and banks over the last decade. 
+            Census tract information is reflective of American Community Survey (ACS) five-year estimate data over two periods. 
+            HMDA data from 2017 to 2021 reflects 2010 census tract boundaries, 2015 ACS estimates for tract demographics, and 2015 ACS estimates for median family income adjusted annually for inflation by the FFIEC. 
+            HMDA data from 2012-2016 also uses 2010 census tract boundaries but uses 2010 ACS estimates for demographic and income information. 
+            Beginning next year HMDA data will use the 2020 census boundaries and ACS five-year estimates.
+
+        </p>
+
+        <p class = "body_text">
+            The companion website includes ACS five-year estimates from 2019 (data collected from 2015-2019) to provide additional information regarding tract level characteristics.
+            This includes the following data or subject tables from <a href="https://data.census.gov/table">data.census.gov</a>:
+
+            <ul class = "body_list">
+                <li><a href = "https://data.census.gov/table?q=S0101">S0101:</a> Age and Gender of Total Population</li>
+                <li><a href = "https://data.census.gov/table?q=S1701">S1701:</a> Individual Poverty Status in the Past 12 Months</li>
+                <li><a href = "https://data.census.gov/table?q=S2301">S2301:</a> Individual Employment Status for Population Aged 20-64</li>
+                <li><a href = "https://data.census.gov/table?q=S2502">S2502:</a> Demographic Characteristics for Occupied Housing Units</li>
+                <li><a href = "https://data.census.gov/table?q=B03002">B03002:</a> Hispanic or Latino Origin by Race</li>
+                <li><a href = "https://data.census.gov/table?q=B08301">B08301:</a> Means of Transportation to Work for Workers Aged 16 and Older</li>
+                <li><a href = "https://data.census.gov/table?q=B15003">B15003:</a> Educational Attainment for the Population 25 Years and Over</li>
+                <li><a href = "https://data.census.gov/table?q=B19001">B19001:</a> Grouped Household Incomes by Income Attainment</li>
+                <li><a href = "https://data.census.gov/table?q=B19013">B19013:</a> Median Household Income per Tract/MSA</li>
+                <li><a href = "https://data.census.gov/table?q=B19113">B19113:</a> Median Family Income per Tract/MSA</li>
+                <li><a href = "https://data.census.gov/table?q=B25037">B25037:</a> Median Year Housing Structure Built</li>
+            </ul>
+
+        </p>
+
+        <p class="body_header"><a id="applicant_info" class="no_hover">Applicant Information</a></p>
+
+        <p class="body_second_header">Race and Ethnicity</p>
+
+        <p class = "body_text">
+            PCRG included both race and ethnicity into a single demographic characteristic, using the following criteria:
+
+            <ul class = "body_list">
+                <li>Race/Ethnicity Not Available: the applicant (and co-applicant if applicable) chooses not to identify as any race or ethnicity</li><br>
+                <li>Non-Hispanic White: the applicant (and co-applicant if applicable) identifies as both white and of non-Hispanic or Latino ethnicity</li><br>
+                <li>Non-Hispanic Black: if single applicant identifies as Black or African American and as non-Hispanic or Latino ethnicity. If co-applicants, both identify as non-Hispanic or Latino and at least one applicant/co-applicant identifies as white and the other identifies as Black or African American. If both applicant/co-applicants identify as one or more minority races, PCRG recognizes the applicant as “Two or more Minority Races”</li><br>
+                <li>Hispanic: if an applicant and/or co-applicant identifies as Hispanic or Latino, they are designated as a Hispanic or Latino applicant.</li>
+            </ul>
+        </p>
+
+        <p class="body_text">
+            <i>
+                The logic applied to non-Hispanic Black applicants also applies to other minority races collected in HMDA applications, such as American Indian or Alaska Native applicants, Asian applicants, and Native Hawaiian or Other Pacific Islander Applicants.
+            </i>
+        </p>
+
+        <p class="body_second_header">Income Status</p>
+
+        <p class="body_text">
+            PCRG calculated the applicant's income group using the income thresholds for area median income. This process uses the applicant's reported income relative to the FFIEC provided Pittsburgh Metro Area median family income. In 2021, the income levels of applicants are as follows:
+        
+            <br>
+            <br>
+
+            <img src="images/2021_ami.png" alt="FFIEC Derived Area Median Income Brackets for Pittsburgh MSA 2021" width="640px">
+        
+        </p>
+        
+        <p class="body_header"><a id="dispoisition_info" class="no_hover">Application Disposition Status</a></p>
+
+        <p class="body_second_header">Originations</p>
+
+        <p class="body_text">The origination rate for any given group is equal to the number of loans originated divided by total applications.
+
+            <br>
+            <br>
+            <img src="images/orig_rate.PNG" alt="Explaination of Origination Rate">
+        
+
+        </p>
+
+        <p class="body_second_header">Denials</p>
+
+        <p class="body_text">The denial rate for any given group is equal to the number of loans denied divided by total applications.
+            <br>
+            <br>
+            <img src="images/denial_rate.PNG" alt="Explaination of Denial Rate">
+        </p>
+
+        <p class="body_second_header">Fallout</p>
+
+        <p class="body_text">The fallout rate for any given group is equal to the number of loans that a given lender approves but is not accepted by the applicant, applications that were withdrawn by the applicant, or applications closed by the bank for incompleteness, divided by total applications.
+            <br>
+            <br>
+            <img src="images/fo_rate.PNG" alt="Explaination of Fallout Rate">
+        </p>
+
+        <p class="body_second_header">Purchased Loans</p>
+
+        <p class="body_text">A bank may purchase from another primary mortgage originator, such as another bank, government-sponsored enterprises (such as Fannie Mae, Freddie Mac, etc.), credit unions, mortgage firms, and more. PCRG has included some analysis on purchased loans, though the bulk of our analysis focuses on primary originations within 
+            the Pittsburgh market.
+        </p>
+
+        <p class="body_header"><a id="census_tract_info" class="no_hover">Census Tract Information</a></p>
+
+        <p class="body_second_header">Tract Income Status</p>
+
+        <p class="body_text">
+            The Federal Financial Institution Examination Council (FFIEC) reports the tract level median family income as a percentage of the metropolitan statistical area median income (annually adjusted by the FFIEC).
+            For HMDA data from 2017 to 2021, this is based off the ACS five-year estimate for family income at the tract level compared to the median family income at the Pittsburgh MSA level - similar to the manner used to calcaulate applicant income status.
+            FFIEC area median incomes are like HUD area median incomes and assume an average family size of four. Using the calculations discussed previously, PCRG was able to determine each census tracts' income level as either low-, moderate-, middle-, or upper-income. Additionally, some tracts are given a designation by the FFIEC as "unknown income." This is generally reserved for areas that do not have significant households, families, or traditional housing units - such as the tracts that represents city parks, cemeteries 
+            and graveyards, and fully commercial areas. This also includes areas like parts of the Oakland neighborhood in Pittsburgh that is predominately student housing and other university space, as well as parts of Marshall-Shadeland which housed State Correctional Institution - Pittsburgh until it's closure in 2017.
+        </p>
+
+        <p class="body_second_header">Neighborhood/Municipality Aggregation</p>
+
+        <p class="body_text">
+            In the neighborhood profiles tab of this website, ACS data is provided at the tract level across 11 different subject tables. When selecting a municipality, neighborhood, or other locality, the dashboard site will automatically calculate an average for the relevant ACS topics.
+            This is not a weighted average based on the populations of the tracts that make up a given locality, and therefore should be used with caution. While not perfect, PCRG strongly believes that providing this information still provides a stronger contextual basis for understanding CRA targetted areas within Allegheny County.
+
+        </p>
 </body>
 </html>

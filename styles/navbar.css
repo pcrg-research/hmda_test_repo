@@ -54,3 +54,8 @@ a.active{
     background: white;
     color: #1b1f4e;
 }
+
+.no_hover:hover{
+    background: white;
+
+}
