@@ -14,7 +14,7 @@
         margin-right: 32px;
         text-decoration: none;
         text-decoration-line: none;
-        transition: background-color 0.15s, opacity 0.15s, box-shadow 0.15s;
+        transition: background-color 0.25s, opacity 0.25s, box-shadow 0.25s;
         
     }
 
@@ -37,23 +37,23 @@
         cursor: pointer;
         text-decoration: none;
         text-decoration-line: none;
-        transition: background-color 0.15s, opacity 0.15s, box-shadow 0.15s;
+        transition: background-color 0.25s , box-shadow 0.25s , text-decoration 0.25s , text-decoration-color 0.25s
     }
 
-    .main_button:link, .first_button:link, .body_button.link{
+    .main_button:link, .first_button:link, .body_button:link{
         color: white;
         text-decoration: none;
     
     }
 
-    .main_button:hover, .first_button:hover, .body_button.hover{
+    .main_button:hover, .first_button:hover, .body_button:hover{
         background-color: #624481;
         box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-color: white;
     } 
 
-    .main_button:active, .first_button:active, .body_button.active{
+    .main_button:active, .first_button:active{
         opacity: 0.80;
         text-decoration: none;
     }
-

@@ -47,15 +47,25 @@ nav ul li a {
 
 a:hover{
     background: #1b1f4e;
-    transition: .15s;
+    text-decoration-color: white;
+    text-decoration: underline;
+    transition: .25s;
 }
 
 a.active{
     background: white;
     color: #1b1f4e;
+    text-decoration: underline;
+    text-decoration-color: #1b1f4e;
 }
 
 .no_hover:hover{
     background: white;
+    cursor: default;
+    text-decoration: none;
+}
 
+.link:hover{
+    background: white;
+    cursor: pointer;
 }

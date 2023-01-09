@@ -29,6 +29,8 @@
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 28px;
+    text-decoration: underline;
+    cursor: default;
 }
 
 .body_second_header{
