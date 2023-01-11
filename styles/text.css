@@ -69,3 +69,30 @@
     background-color: #272C67;
     color: white;
 }
+
+.update_text{
+    font-style: italic;
+    font-size:  small;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.address{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    width: 90%;
+    padding-left: 22.5%;
+    padding-right: 20%;
+    padding-top: 28px;
+}
+
+.body_form{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 48px;
+    width: 90%;
+    padding-left: 5%;
+    padding-top: 28px;
+}
