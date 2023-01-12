@@ -5,16 +5,11 @@
         <link rel = "stylesheet" href="styles/buttons.css">
         <link rel = "stylesheet" href="styles/text.css">
         <link rel = "stylesheet" href="styles/navbar.css">
+        <link rel = "stylesheet" href="styles/popup.css">
         <link rel = "icon" href="images/pcrg_favicon.png">
 
-        <style>
-            form button{
-                margin-left: 5%;
-            }
-        </style>
-
     </head>
-    <body>
+    <body >
         <nav>
             <label class="logo"> Pittsburgh Community Reinvestment Group </label>
             <ul>
@@ -27,35 +22,60 @@
                 <li><a href = "contact.html">Contact</a></li>
             </ul>
         </nav>
-        <br>
-        <br>
-        <br>
-        <form action="https://sheetdb.io/api/v1/jq5pbe10vygyn" method="post" id="sheetdb-form">
-            <div>
-                <label for="name" class="body_form">Name:</label>
-                <input name="data[Name]" id="name" type="text" placeholder="Name" required>
+
+        <div class="container">
+            <button class="dl_btn" onclick="openPopup()">DOWNLOAD REPORT</button>
+            <div class="popup" id="popup">
+                <img src="/images/question_mark.png" alt="Question Mark">
+                <p class="header2">Would You Like to Share Your Information with PCRG?</p>
+                <p class="form_body_text">PCRG wants to learn more about individuals engaging with our research. If you would like to share more information about yourself and sign up for PCRG's monthly newsletter, complete the form below and click <i>'SUBMIT.'</i> Otherwise please click <i>'SKIP.'</p>
+            
+                <br>
+
+                <form action="https://sheetdb.io/api/v1/jq5pbe10vygyn" method="post" id="sheetdb-form" class="form_text">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input name="data[Name]" id="name" type="text" placeholder="Name" required>
+                    </div>
+                    <div>
+                        <label for="organization">Organization:</label>
+                        <input name="data[Organization]" id="organization" type="text" placeholder="Organization" required>
+                    </div>
+                    <div>
+                        <label for="email address" >E-mail Address:</label>
+                        <input name="data[E-mail Address]" id="email address" type="email" placeholder="E-mail Address" required>
+                    </div>
+                    <div>
+                        <label for="emailSignUp">Would you like to sign up for the PCRG monthly newsletter?</label>
+                        <select name="data[Newsletter Sign Up]" id="emailSignUp">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn" onclick="closePopup()">SUBMIT</button>
+                    <button type="button" class="btn" onclick="closePopup()">SKIP</button>
+                </form>
             </div>
-            <div>
-                <label for="organization" class="body_form">Organization:</label>
-                <input name="data[Organization]" id="organization" type="text" placeholder="Organization" required>
-            </div>
-            <div>
-                <label for="email address" class="body_form">E-mail Address:</label>
-                <input name="data[E-mail Address]" id="email address" type="email" placeholder="E-mail Address" required>
-            </div>
-            <div>
-                <label for="emailSignUp" class="body_form">Would you like to sign up for the PCRG monthly newsletter?</label>
-                <select name="data[Newsletter Sign Up]" id="emailSignUp">
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-            <br>
-            <button type="submit" class="body_button">Submit</button>
-            <button type="reset" class="body_button">Reset</button>
-        </form>
+        </div>
+
+        <div>
+            <iframe class="hide" type="iframepdf" id="pdf_frame" src="/report/test.pdf#&zoom=84%"></iframe> <!--make sure to change to full doc-->
+        </div>
 
         <script>
+            let popup = document.getElementById("popup")
+            let pdf_frame = document.getElementById("pdf_frame")
+
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+            
+            function closePopup(){
+                popup.classList.remove("open-popup");
+                pdf_frame.classList.add("unhide")
+            }
+
             function downloadURI(uri, name) {
             var link = document.createElement("a");
             link.download = name;
@@ -66,7 +86,6 @@
             delete link;
             }
 
-
             var form = document.getElementById('sheetdb-form');
             form.addEventListener("submit", e => {
               e.preventDefault();
@@ -76,7 +95,6 @@
               }).then(
                   response => response.json()
               ).then((html) => {
-                // you can put any JS code here
                 downloadURI("/report/test.pdf", "test.pdf") //TODO: CHANGE 'test.pdf' in both places to pcrg_hmda_report_2021 once it is available from Monica!!!
               });
             });
