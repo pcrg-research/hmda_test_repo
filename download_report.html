@@ -33,28 +33,32 @@
                 <br>
 
                 <form action="https://sheetdb.io/api/v1/jq5pbe10vygyn" method="post" id="sheetdb-form" class="form_text">
-                    <div>
-                        <label for="name">Name:</label>
-                        <input name="data[Name]" id="name" type="text" placeholder="Name" required>
-                    </div>
-                    <div>
-                        <label for="organization">Organization:</label>
-                        <input name="data[Organization]" id="organization" type="text" placeholder="Organization" required>
-                    </div>
-                    <div>
-                        <label for="email address" >E-mail Address:</label>
-                        <input name="data[E-mail Address]" id="email address" type="email" placeholder="E-mail Address" required>
-                    </div>
-                    <div>
-                        <label for="emailSignUp">Would you like to sign up for the PCRG monthly newsletter?</label>
-                        <select name="data[Newsletter Sign Up]" id="emailSignUp">
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </div>
+                    <ul>
+                        <li>
+                            <label for="name">Name:</label>
+                            <input name="data[Name]" id="name" type="text" placeholder="Name" required>
+                        </li>
+                        <li>
+                            <label for="organization">Organization:</label>
+                            <input name="data[Organization]" id="organization" type="text" placeholder="Organization" required>
+                        </li>
+                        <il>
+                            <label for="email address" >E-mail Address:</label>
+                            <input name="data[E-mail Address]" id="email address" type="email" placeholder="E-mail Address" required>
+                        </il>
+                        <li>
+                            <label for="emailSignUp">Would you like to sign up for the PCRG monthly newsletter?</label>
+                            <select name="data[Newsletter Sign Up]" id="emailSignUp">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </li>
                     <br>
+                </ul>
                     <button type="submit" class="btn" onclick="closePopup()">SUBMIT</button>
+                    <button type="reset"  class="btn"                       >RESET</button>
                     <button type="button" class="btn" onclick="closePopup()">SKIP</button>
+                    
                 </form>
             </div>
         </div>
