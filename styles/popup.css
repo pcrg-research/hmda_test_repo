@@ -119,3 +119,14 @@ form label{
     width: 100%;
     display: block;
 }
+
+.report_cover{
+    
+    display: block;
+    padding-top: 32px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    height: 640px;
+
+}

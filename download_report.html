@@ -29,8 +29,14 @@
             </ul>
         </nav>
 
+        <div>
+
+            <img src="/images/PCRG Final Cover.png", alt="Mortgage Lending Study 2021 Report Cover Page" class="report_cover" id="hide_item">
+
+        </div>
+
         <div class="container">
-            <button class="dl_btn" onclick="openPopup()">DOWNLOAD REPORT</button>
+            <button class="dl_btn" id="hide_item" onclick="openPopup()">DOWNLOAD REPORT</button>
             <div class="popup" id="popup">
                 <img src="/images/question_mark.png" alt="Question Mark">
                 <p class="header2">Would You Like to Share Your Information with PCRG?</p>
@@ -74,16 +80,25 @@
         </div>
 
         <script>
+
+            let _hide = document.getElementById("hide_item")
+
+            function hideItem(){
+                document.getElementById("hide_item").remove();
+            }
+
             let popup = document.getElementById("popup")
             let pdf_frame = document.getElementById("pdf_frame")
 
             function openPopup(){
+                hideItem();
                 popup.classList.add("open-popup");
+                pdf_frame.classList.add("unhide")
             }
             
             function closePopup(){
                 popup.classList.remove("open-popup");
-                pdf_frame.classList.add("unhide")
+    
             }
 
             function downloadURI(uri, name) {
