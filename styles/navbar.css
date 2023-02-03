@@ -121,7 +121,7 @@ a.active{
         font-size: 20px;;
     }
     a:hover, a.active{
-        background: white;;
+        background: white;
         color: #272C67;
     }
     #check:checked ~ ul{
