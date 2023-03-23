@@ -88,6 +88,12 @@
     padding-top: 28px;
 }
 
+.email{
+    text-decoration: solid;
+    text-decoration-line: underline;
+
+}
+
 .email:hover{
     background-color: #272C67;
     color: white;
