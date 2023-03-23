@@ -55,6 +55,19 @@
     padding-top: 28px;
 }
 
+.home_header{
+    color: #272C67;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    width: 66%;
+    line-height: 24px;
+    width: 90%;
+    padding-left: 25%;
+    padding-right: 20%;
+    padding-top: 28px;
+}
+
 .body_text{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
