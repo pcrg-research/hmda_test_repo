@@ -87,3 +87,19 @@
         border-color: #1b1f4e;
         color: #1b1f4e;
     }
+
+    .button_no_dec {
+        background: #725292;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .button_no_dec:hover{
+        background-color: #624481;
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
